@@ -1,0 +1,39 @@
+/* Homepage.css */
+.slider-section {
+    position: relative; /* Ensure overlay is positioned relative to the section */
+    background-image: url('../assets/images/ivan-aleksic-PDRFeeDniCk-unsplash.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Set the height of the section */
+    padding-top: 50px; /* Adds top padding to the section */
+  }
+  
+  .slider-section::before {
+    content: ""; /* Required for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+    z-index: 1; /* Make sure the overlay is on top of the background */
+  }
+  
+  .slider-section > * {
+    position: relative;
+    z-index: 2; /* Ensure all child elements are above the overlay */
+  }
+  
+
+  .first-thing{
+    padding-top: 100px;
+  }
+  
+  .section-title {
+    margin-top: 50px; /* Add space between sections */
+  }
+  
+  .welcome-section {
+    margin-top: 50px; /* Add space for the welcome section */
+  }
+  
