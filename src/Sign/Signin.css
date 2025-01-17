@@ -1,21 +1,17 @@
-/* Signin.css */
 .modal-content {
     background-image: url('../assets/images/vasily-koloda-8CqDvPuo_kI-unsplash.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Prevent image repetition */
-    min-height: px; /* Set a fixed height for the modal */
+    min-height: 300px; /* Set a fixed height for the modal */
     display: flex;
     align-items: center; /* Centers the form vertically */
     justify-content: center; /* Centers the form horizontally */
-    top:150px;
-  }
+    top: 150px;
+}
 
-  .signin-container .bg-dark {
+.signin-container .bg-dark {
     width: 100%;
     max-width: 800px; /* Adjust the max-width as needed */
     margin: 0 auto;
-  }
-
-
-  
+}

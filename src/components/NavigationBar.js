@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { Navbar, Nav, Container, Modal, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Signin from '../Sign/Signin';  // Import Signin component
-import Signup from '../Sign/Signiup';  // Import Signup component
 import './Navbar.css'; // Import custom CSS
 
 const NavigationBar = () => {
   const [showModal, setShowModal] = useState(false);
-  const [modalType, setModalType] = useState('');
+  const [modalType, setModalType] = useState('Signin');  // Default to 'Signin'
 
-  // Function to handle button clicks (for signup or signin)
-  const handleButtonClick = (type) => {
-    setModalType(type); // Set the modal type (either Signup or Signin)
+  // Function to handle button clicks (for signin)
+  const handleButtonClick = () => {
+    setModalType('Signin'); // Set the modal type to 'Signin'
     setShowModal(true);  // Show the modal
   };
 
@@ -29,27 +28,22 @@ const NavigationBar = () => {
           <Navbar.Collapse id="navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link as={Link} to="/">Home</Nav.Link>
-              {/* Links for Signup and Signin which open the modal */}
-              <Nav.Link onClick={() => handleButtonClick('Signup')}>Signup</Nav.Link>
-              <Nav.Link onClick={() => handleButtonClick('Signin')}>Signin</Nav.Link>
+              {/* Only the Signin link */}
+              <Nav.Link onClick={handleButtonClick}>Signin</Nav.Link>
               <Nav.Link as={Link} to="/signout">Signout</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
-      {/* Modal for Signup or Signin */}
+      {/* Modal for Signin */}
       <Modal show={showModal} onHide={handleCloseModal} className="modal-centered">
         <Modal.Header closeButton>
-          <Modal.Title>{modalType === 'Signup' ? 'Sign Up' : 'Sign In'}</Modal.Title>
+          <Modal.Title>Sign In</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* Render either Signup or Signin form based on modalType */}
-          {modalType === 'Signup' ? (
-            <Signup />
-          ) : (
-            <Signin />
-          )}
+          {/* Render the Signin form */}
+          <Signin />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>Close</Button>

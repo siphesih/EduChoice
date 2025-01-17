@@ -1,22 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from '../landing/HomePage';
-import Signup from '../signup/Signup';
-//import Login from '../Sign/Signin';
-
-//import AddSchool from './landing/AddSchool';
-//import ManageSchools from './landing/ManageSchools';
+// Removed Signup and Login routes as you requested
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
-     {/*} <Route path="/signup" element={<Signup />} /> *}
-      <Route path="/login" element={<Login />} /> *
-      
-      
-      {/*<Route path="/admin/add-school" element={<AddSchool />} />*/}
-       {/*<Route path="/admin/schools" element={<ManageSchools />} />*/}
+      {/* No Signup or Login routes */}
     </Routes>
   );
 };
