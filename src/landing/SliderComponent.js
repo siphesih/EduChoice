@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const SliderComponent = () => {
   return (
     <section>
@@ -14,13 +13,31 @@ const SliderComponent = () => {
                 paddingTop: '50px', // Pushes the text down
               }}
             >
-              <h1>
-              Transform the way you learn—download notes, <span style={{ color: 'white' }}>stay updated with announcements,  </span> and prepare with assessments and practice papers,  <span style={{ color: 'white' }}>all in one place!</span>
+              <h1
+                style={{
+                  fontSize: '4rem',
+                  color: 'white',
+                  fontFamily: 'Roboto, sans-serif',
+                }}
+              >
+                Stay updated <br />
+                <span
+                  style={{
+                    color: 'white',
+                    fontFamily: 'Roboto, sans-serif',
+                  }}
+                >
+                  with EduFlow <br />
+                </span>
+                <span
+                  style={{
+                    color: 'white',
+                    fontFamily: 'Roboto, sans-serif',
+                  }}
+                >
+                  all in one place!
+                </span>
               </h1>
-              <p style={{ color: 'white' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam.
-              </p>
-    
             </div>
           </div>
         </div>

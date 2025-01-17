@@ -39,7 +39,7 @@ const NavigationBar = () => {
       </Navbar>
 
       {/* Modal for Signup or Signin */}
-      <Modal show={showModal} onHide={handleCloseModal}>
+      <Modal show={showModal} onHide={handleCloseModal} className="modal-centered">
         <Modal.Header closeButton>
           <Modal.Title>{modalType === 'Signup' ? 'Sign Up' : 'Sign In'}</Modal.Title>
         </Modal.Header>
