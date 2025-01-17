@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import './Signin.css'; // Import the CSS file with background styling
 
 const Signin = () => {
   const [formData, setFormData] = useState({
@@ -22,10 +23,10 @@ const Signin = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="signin-container mt-5">
       <Row className="justify-content-center">
         <Col md={6}>
-          <h2 className="text-center">Signin</h2>
+          <h2 className="text-center text-white">Signin</h2>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formEmail">
               <Form.Label>Email</Form.Label>

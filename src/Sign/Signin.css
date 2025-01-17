@@ -1,0 +1,8 @@
+/* Signin.css */
+.modal-content {
+  background-image: url('../assets/images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent image repetition */
+  border-radius: 8px; /* Optional: To make the corners of the modal rounded */
+}

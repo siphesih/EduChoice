@@ -1,0 +1,12 @@
+/* Signup.css */
+.modal-content {
+    background-image: url('../assets/images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent image repetition */
+    min-height: 400px; /* Set a fixed height for the modal */
+    display: flex;
+    align-items: center; /* Centers the form vertically */
+    justify-content: center; /* Centers the form horizontally */
+  }
+  

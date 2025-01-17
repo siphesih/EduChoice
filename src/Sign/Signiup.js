@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import './Signup.css'; // Import the CSS file with background styling
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -23,51 +24,53 @@ const Signup = () => {
   };
 
   return (
-    <Container className="mt-5">
-      <Row className="justify-content-center">
-        <Col md={6}>
-          <h2 className="text-center">Signup</h2>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="formName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder="Enter your name"
-              />
-            </Form.Group>
+    <div className="signup-container">
+      <Container className="mt-5">
+        <Row className="justify-content-center">
+          <Col md={6}>
+            <h2 className="text-center">Signup</h2>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group controlId="formName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Enter your name"
+                />
+              </Form.Group>
 
-            <Form.Group controlId="formEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Enter your email"
-              />
-            </Form.Group>
+              <Form.Group controlId="formEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Enter your email"
+                />
+              </Form.Group>
 
-            <Form.Group controlId="formPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleInputChange}
-                placeholder="Enter your password"
-              />
-            </Form.Group>
+              <Form.Group controlId="formPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleInputChange}
+                  placeholder="Enter your password"
+                />
+              </Form.Group>
 
-            <Button variant="primary" type="submit" block>
-              Sign Up
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+              <Button variant="primary" type="submit" block>
+                Sign Up
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
