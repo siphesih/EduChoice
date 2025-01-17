@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+
 
 const SliderComponent = () => {
   return (
@@ -20,14 +20,7 @@ const SliderComponent = () => {
               <p style={{ color: 'white' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam.
               </p>
-              <div className="button">
-                <Button variant="primary" href="#" style={{ backgroundColor: '#007bff', borderColor: '#007bff' }}>
-                  Get Appointment
-                </Button>
-                <Button variant="primary" href="#" style={{ backgroundColor: '#007bff', borderColor: '#007bff' }}>
-                  Learn More
-                </Button>
-              </div>
+    
             </div>
           </div>
         </div>

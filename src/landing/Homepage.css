@@ -36,4 +36,26 @@
   .welcome-section {
     margin-top: 50px; /* Add space for the welcome section */
   }
+
+  .cardss {
+    position: absolute;
+    top: 250px; /* Increase this value to push it lower */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 3;
+}
+
+/* Ensure the next section does not overlap */
+.section-container {
+    padding-top: 10px; /* Adjust according to the card section height */
+}
+
+section.d-md-flex {
+  width: 100% !important;
+}
+
+
+  
+  
   
