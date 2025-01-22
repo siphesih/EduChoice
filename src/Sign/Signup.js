@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import axios from "axios"; // Import Axios
+import axios from "axios";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
-    username: "",  // Change 'name' to 'username'
+    name: "",  // Changed from 'username' to 'name'
     email: "",
     password: ""
   });
 
-  const [message, setMessage] = useState("");  // To display success or error messages
+  const [message, setMessage] = useState("");  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,13 +18,9 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Sending POST request to the backend
       const response = await axios.post("http://localhost:5000/signup", formData);
-
-      // Handle success response
       setMessage(response.data.message);
     } catch (error) {
-      // Handle error response
       if (error.response) {
         setMessage(error.response.data.message);
       } else {
@@ -39,11 +35,11 @@ const Signup = () => {
         <h2 className="text-center mb-3">Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">Username</label> {/* Change from 'Name' to 'Username' */}
+            <label className="form-label">Name</label> {/* Changed from 'Username' to 'Name' */}
             <input
               type="text"
-              name="username"  // Change name field to 'username'
-              value={formData.username}
+              name="name"  // Changed from 'username' to 'name'
+              value={formData.name}
               onChange={handleChange}
               className="form-control bg-secondary text-light border-0"
               required
@@ -74,7 +70,6 @@ const Signup = () => {
           <button type="submit" className="btn btn-success w-100">Sign Up</button>
         </form>
 
-        {/* Display success or error message */}
         {message && <p className="text-center mt-3 text-light">{message}</p>}
 
         <p className="text-center mt-3">
