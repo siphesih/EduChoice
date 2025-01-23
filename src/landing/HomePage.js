@@ -4,9 +4,12 @@ import SliderComponent from './SliderComponent';
 import './Homepage.css';
 import { AiOutlineHome, AiOutlineUser, AiOutlineLock } from "react-icons/ai"; // Use different icons
 
+
 const Homepage = () => {
   return (
     <>
+
+    
       <div className="slider-section">
         <SliderComponent />
       </div>

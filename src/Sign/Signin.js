@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Signin.css';
 
-const Signin = () => {
+const Signin = ({ onLoginSuccess }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -11,6 +12,7 @@ const Signin = () => {
 
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +29,20 @@ const Signin = () => {
 
     try {
       const response = await axios.post('http://localhost:5000/signin', formData);
+      
+      // Save user data in localStorage
+      localStorage.setItem('user', JSON.stringify(response.data.user));
+
       setSuccess(response.data.message);
+      
+      // Update parent state (if function is provided)
+      if (onLoginSuccess) {
+        onLoginSuccess(response.data.user);
+      }
+
+      // Redirect to HomeLoggedIn after 1 second
+      setTimeout(() => navigate('/homeloggedin'), 1000);
+
     } catch (error) {
       setError(error.response?.data?.message || 'Something went wrong');
     }
